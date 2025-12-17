@@ -1,0 +1,115 @@
+/* ---------- Page Wrapper ---------- */
+.payments-wrapper {
+    min-height: 100vh;
+    background: #121212;
+    padding: 2.5rem;
+    color: #222;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  /* ---------- Header Section ---------- */
+  .payments-header {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .payments-header h2 {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #d90429;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+  
+  .payments-header p {
+    color: white;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  /* ---------- Grid ---------- */
+  .payments-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+  }
+  
+  /* ---------- Card ---------- */
+  .payment-card {
+    background: #fff;
+    border: 2px solid #d90429;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(217, 4, 41, 0.15);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .payment-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(217, 4, 41, 0.3);
+  }
+  
+  /* ---------- Card Header ---------- */
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #d90429;
+    color: #fff;
+    padding: 1rem;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  
+  .plan-badge {
+    background: #fff;
+    color: #d90429;
+    padding: 0.3rem 0.7rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+  }
+  
+  .amount {
+    font-size: 1.2rem;
+    font-weight: 700;
+  }
+  
+  /* ---------- Card Body ---------- */
+  .card-body {
+    padding: 1rem 1.2rem;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* ---------- Card Footer ---------- */
+  .card-footer {
+    padding: 0.8rem 1.2rem;
+    text-align: right;
+  }
+  
+  .view-btn {
+    background: #d90429;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .view-btn:hover {
+    background: #b20220;
+  }
+  
+  /* ---------- No Data ---------- */
+  .no-data {
+    text-align: center;
+    color: #666;
+    margin-top: 2rem;
+    font-size: 1.1rem;
+  }
+  

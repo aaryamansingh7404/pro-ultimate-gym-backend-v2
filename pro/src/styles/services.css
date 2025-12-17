@@ -1,0 +1,133 @@
+.services-section {
+    text-align: center;
+    padding: 50px;
+  }
+  
+  .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 5rem;
+    margin-top: 30px;
+    align-items: start;
+  }
+
+  .services-section h2 {
+    color:red;  
+    font-size: 2rem;
+
+  }
+  .service-highlight{
+    font-size: 2rem;
+    color:black;
+  }
+  
+  .service-card {
+    cursor: pointer;
+    background: #fff;
+    color: black;
+    border-radius: 10px;
+    padding: 20px;
+    transition: 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+    height: auto; 
+  }
+  
+  .service-card img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+  
+  .service-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .service-btn{
+      background-color: red;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      font-size: 0.8rem;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: 0.3s;
+    }
+    
+    .cta-btn:hover {
+      background-color: darkred;
+    }
+
+
+    /* .toggle-btn {
+      color: red;
+      cursor: pointer;
+      font-weight: bold;
+      margin-left: 5px;
+    }
+    .toggle-btn:hover {
+      text-decoration: underline;
+    } */
+
+    .flip-card {
+      background-color: transparent;
+      width: 100%;
+      height: 300px;
+      perspective: 1000px; /* Enables 3D flip */
+    }
+    
+    .flip-card-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+    
+    .flip-card:hover .flip-card-inner {
+      transform: rotateY(180deg);
+    }
+    
+    .flip-card-front,
+    .flip-card-back {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      backface-visibility: hidden;
+      border-radius: 12px;
+      padding: 1rem;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .flip-card-front {
+      background: #fff;
+      z-index: 2;
+    }
+    
+    .flip-card-front img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin-bottom: 15px;
+    }
+    
+    
+    .flip-card-back {
+      background: #f5f5f5;
+      transform: rotateY(180deg);
+    }
+    
+    .card-logo {
+      width: 60px;
+      height: 60px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+    

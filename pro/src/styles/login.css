@@ -1,0 +1,129 @@
+/* Full-screen section with background image */
+.login-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: url('../assets/signup.png') no-repeat center center/cover;
+  position: relative;
+}
+
+/* Overlay for blur & readability */
+.login-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(255,255,255,0.3);
+  backdrop-filter: blur(5px);
+  z-index: 0;
+}
+
+/* Login form container */
+.login-box {
+  position: relative;
+  z-index: 1;
+  width: 350px;
+  padding: 30px;
+  border-radius: 10px;
+  background-color: rgba(255,255,255,0.5);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+  text-align: center;
+}
+
+/* Headings */
+.login-box h2 {
+  margin-bottom: 25px;
+  font-size: 24px;
+  color: #333;
+}
+
+/* Inputs */
+.input-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.input-group input {
+  width: 80%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 16px;
+  transition: 0.3s;
+}
+
+.input-group input:focus {
+  border-color: #28a745;
+  outline: none;
+}
+
+/* Forgot password */
+.forgot-password {
+  position: absolute;
+  right: 10%;
+  bottom: -28px;
+  font-size: 13px;
+  color: red;
+  font-weight: bolder;
+  cursor: pointer;
+}
+
+.forgot-password:hover {
+  text-decoration: underline;
+}
+
+/* Login button */
+.login-btn {
+  width: 80%;
+  padding: 12px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.login-btn:hover {
+  background-color: #218838;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .login-box {
+    width: 90%;
+    padding: 20px;
+  }
+  .input-group input,
+  .login-btn {
+    width: 90%;
+    font-size: 15px;
+  }
+  .forgot-password {
+    right: 5%;
+    bottom: -25px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 455px) {
+  .login-box h2 {
+    font-size: 1.5rem;
+  }
+  .input-group input,
+  .login-btn {
+    font-size: 14px;
+    padding: 8px;
+  }
+  .forgot-password {
+    font-size: 11px;
+    bottom: -20px;
+  }
+}

@@ -1,0 +1,19 @@
+/* AdminDashboard.css */
+.dashboard-container {
+    display: flex;
+    min-height: 100vh;
+    background-color: #1f2937; /* bg-gray-900 */
+    color: #f9fafb; /* text-gray-100 */
+  }
+  
+  .sidebar {
+    width: 18rem; /* 72 */
+    background-color: #1f2937;
+    padding: 1.5rem;
+  }
+  
+  .main {
+    flex: 1;
+    padding: 1.5rem;
+  }
+  

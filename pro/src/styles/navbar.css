@@ -1,0 +1,182 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+/* ===== Navbar Container ===== */
+.navbar {
+  position: relative;
+  z-index: 10000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  
+}
+
+/* ===== Logo Styling ===== */
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  font-family: "Arial", sans-serif;
+}
+
+.pro {
+  color: red;
+  font-style: italic;
+  font-weight: 900;
+  text-transform: uppercase;
+  border-bottom: 3px solid red;
+  padding-right: 8px;
+}
+
+.ultimate, .gyms {
+  color: black;
+  font-style: italic;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+/* ===== Navigation Links ===== */
+.nav-links {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  transition: all 0.3s ease;
+ 
+}
+
+.nav-links li {
+  display: inline;
+  
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1.1rem;
+  padding: 8px 12px;
+  transition: 0.3s ease-in-out;
+  
+}
+
+.nav-links a:hover {
+  background-color: rgb(201, 66, 66);
+  border-radius: 5px;
+  color: #fff;
+}
+
+/* ===== Menu Icon (Hamburger) ===== */
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* ===== Dropdown ===== */
+.dropdown {
+  position: relative;
+  display: inline-block;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.dropdown-title {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background-color: white;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  width: 180px;
+  display: none; /* DEFAULT CLOSED */
+  flex-direction: column;
+  z-index: 9999;
+}
+
+.dropdown.open .dropdown-menu {
+  display: flex; /* OPEN USING REACT STATE */
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: black;
+  transition: 0.3s;
+}
+
+.dropdown-menu a:hover {
+  background-color: rgb(201, 66, 66);
+  color: white;
+}
+
+/* ===== Responsive Styles ===== */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    z-index: 999;
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .dropdown-menu {
+    position: static;
+    box-shadow: none;
+    width: 100%;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: none; /* Disable hover on mobile */
+  }
+
+  .dropdown.open .dropdown-menu {
+    display: flex;
+  }
+}
+@media (max-width: 455px) {
+  .logo {
+    font-size: 24px; /* thoda chhota kar diya responsive ke liye */
+    flex-wrap: wrap;
+  }
+
+  .pro {
+    padding-right: 6px;
+    font-size: 24px;
+    border-bottom: 2px solid red;
+  }
+
+  .ultimate, .gyms {
+    font-size: 24px;
+  }
+}
+
+

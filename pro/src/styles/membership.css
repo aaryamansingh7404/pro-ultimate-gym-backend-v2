@@ -1,0 +1,316 @@
+.form-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    /* background-color: #111;  */
+    color: black;
+    border-radius: 8px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+  }
+  
+  .form-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .form-title .gym {
+    color: red;
+    text-decoration: underline;
+    font-weight: 700;
+    margin-right: 0.3rem;
+  }
+  
+  .form-title .membership {
+    color: black;
+    text-decoration: none;
+    font-weight: 700;
+    /* background-color: white; */
+    padding: 0 0.3rem;
+    border-radius: 2px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.3rem;
+    margin-top: 1rem;
+    font-weight: 600;
+  }
+  
+  input, select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 2px solid red;
+    border-radius: 4px;
+    /* background-color: #222; */
+    color: black;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease;
+  }
+  
+  input:focus, select:focus {
+    border-color: #ff3b3b;
+    background-color: white;
+    color:black;
+  }
+  
+  .error {
+    color: #ff4444;
+    font-size: 0.85rem;
+    margin-top: 0.2rem;
+  }
+  
+  .radio-group {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.3rem;
+  }
+  
+  .radio-group label {
+    font-weight: normal;
+  }
+  
+  button {
+    margin-top: 2rem;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #cc0000;
+  }
+  
+  .trainer-section {
+    margin-top: 2rem;
+    background-color: white;
+    color:black;
+    padding: 1rem;
+    border-radius: 6px;
+    box-shadow: 0 0 8px rgba(255, 0, 0, 0.5);
+  }
+  
+  .trainer-card {
+    border: 1px solid red;
+    padding: 0.8rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+  }
+  
+  .trainer-name {
+    font-weight: 700;
+    color: black;
+    margin-bottom: 0.3rem;
+  }
+  
+  .trainer-expert {
+    font-style: italic;
+    color: red;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+  }
+  
+
+.trainer-card {
+  position: relative;
+  border: 2px solid #e53935;
+  padding: 15px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  background-color: #fff;
+  transition: box-shadow 0.3s ease;
+  outline: none;
+}
+
+/* .trainer-card.selected {
+  border-color: #43a047; 
+  background-color: #e8f5e9;
+  box-shadow: 0 0 15px rgba(67, 160, 71, 0.8);
+} */
+
+.trainer-card .tick-mark {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 24px;
+  color: red; 
+  font-weight: bold;
+}
+
+.trainer-info .trainer-expert {
+  font-style: italic;
+  margin: 6px 0;
+}
+
+.trainer-info .trainer-price {
+  font-weight: 600;
+}
+
+/* Payment Gateway */
+/* .stripe-modal {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  display: flex; justify-content: center; align-items: center;
+  background: rgba(0,0,0,0.5);
+  z-index: 1000;
+}
+
+.stripe-card {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  width: 400px;
+  text-align: center;
+}
+
+.card-element-wrapper {
+  background: #f8f9fa;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 20px 0;
+  box-shadow: inset 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.pay-btn {
+  background-color: #5469d4;
+  color: white;
+  padding: 12px 25px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pay-btn:hover {
+  background-color: #4353b3;
+}
+
+.payment-status {
+  margin-top: 15px;
+  font-weight: 500;
+  color: #333;
+} */
+
+/* Payment Modal Background */
+.stripe-modal {
+  position: fixed;
+  top: 0; 
+  left: 0; 
+  width: 100vw; 
+  height: 100vh;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2000;
+  backdrop-filter: blur(6px);
+}
+
+/* Payment Card Container */
+.stripe-card {
+  background: #fff;
+  padding: 30px 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+  width: 420px;
+  text-align: center;
+  border: 2px solid #7a2eff;
+}
+
+/* Payment Title */
+.stripe-card h3 {
+  color: #2d046e;
+  font-size: 22px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+/* Accepted Cards Row */
+.accepted-cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.accepted-cards img {
+  width: 50px;
+  height: 35px;
+  object-fit: contain;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  padding: 3px;
+  background-color: #fafafa;
+}
+
+/* Stripe Card Input Field */
+.card-element-wrapper {
+  background: #faf6ff;
+  padding: 12px 15px;
+  border-radius: 8px;
+  border: 2px solid #a66cff;
+  margin-bottom: 20px;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+  transition: 0.3s ease;
+}
+
+.card-element-wrapper:hover {
+  border-color: #7a2eff;
+}
+
+/* Pay Button */
+.pay-btn {
+  width: 100%;
+  background-color: #7a2eff;
+  color: white;
+  padding: 12px;
+  font-size: 16px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  margin-top: 5px;
+}
+
+.pay-btn:hover {
+  background-color: #6519e3;
+  transform: scale(1.03);
+}
+
+/* Payment Status Message */
+.payment-status {
+  margin-top: 15px;
+  font-weight: 500;
+  color: #333;
+  background-color: #f8f9fa;
+  padding: 8px;
+  border-radius: 6px;
+}
+
+/* Animation */
+@keyframes slideIn {
+  from {
+    transform: translateY(-50px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.stripe-card {
+  animation: slideIn 0.4s ease forwards;
+}
