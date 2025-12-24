@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors";
 import dotenv from "dotenv";
+dotenv.config({ path: "./backend/.env" });
 import connectDB from "./db/connectDB.js";
 
 import userRoutes from "./routes/userRoutes.js";
@@ -17,9 +18,7 @@ dotenv.config();
 
 const app = express();
 
-/* =======================
-   MIDDLEWARES
-======================= */
+/* MIDDLEWARES */
 app.use(cors({
   origin: [
     "http://localhost:5173",
@@ -31,14 +30,10 @@ app.use(cors({
 app.use(express.json());
 app.use("/uploads", express.static("uploads"));
 
-/* =======================
-   DATABASE
-======================= */
+/* DATABASE*/
 connectDB();
 
-/* =======================
-   STRIPE
-======================= */
+/*STRIPE */
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
 
 app.post("/api/create-payment-intent", async (req, res) => {
